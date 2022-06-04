@@ -29,29 +29,55 @@ function App() {
     },
     education: [
       {
-        school: "",
-        degree: "",
-        fieldOfStudy: "",
-        grade: "",
-        description: "",
-        startDate: "",
-        endDate: "",
+        school: "University Of Mars",
+        degree: "Master",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequatur tempore a odit dolores nobis sed consequuntur laudantium, vero itaque iure eveniet, perspiciatis deleniti unde provident veniam saepe ratione voluptatibus.",
+        startDate: "2051",
+        endDate: "2053",
+      },
+      {
+        school: "University Of Uranus",
+        degree: "Bachelor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequatur tempore a odit dolores nobis sed consequuntur laudantium, vero itaque iure eveniet, perspiciatis deleniti unde provident veniam saepe ratione voluptatibus.",
+        startDate: "2049",
+        endDate: "2051",
       },
     ],
     experience: [
       {
-        company: "",
-        position: "",
-        startDate: "",
-        endDate: "",
-        description: "",
+        company: "Google",
+        position: "CEO",
+        startDate: "2020",
+        endDate: "2022",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequatur tempore a odit dolores nobis sed consequuntur laudantium, vero itaque iure eveniet, perspiciatis deleniti unde provident veniam saepe ratione voluptatibus.",
+      },
+      {
+        company: "Facebook",
+        position: "CEO",
+        startDate: "2022",
+        endDate: "Present",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequatur tempore a odit dolores nobis sed consequuntur laudantium, vero itaque iure eveniet, perspiciatis deleniti unde provident veniam saepe ratione voluptatibus.",
       },
     ],
     skills: [
       {
-        skill: "",
-        level: "",
-        yearsOfExperience: "",
+        skill: "Javascript",
+        level: "70",
+        yearsOfExperience: "1.5",
+      },
+      {
+        skill: "Typescript",
+        level: "40",
+        yearsOfExperience: "0.5",
+      },
+      {
+        skill: "React",
+        level: "65",
+        yearsOfExperience: "0.8",
       },
     ],
   });

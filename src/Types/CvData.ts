@@ -24,8 +24,6 @@ type CvData = {
   education: {
     school: string;
     degree: string;
-    fieldOfStudy: string;
-    grade: string;
     description: string;
     startDate: string;
     endDate: string;
