@@ -12,7 +12,7 @@ const Experience = ({
   }[];
 }) => {
   return (
-    <div className="flex flex-col gap-4 text-gray-700">
+    <div className="flex flex-col max-w-[52rem]  gap-4 text-gray-700">
       {experience.map((exp, index) => {
         return (
           <div key={index} className="flex gap-16 font-medium">
@@ -20,7 +20,7 @@ const Experience = ({
               <h1
                 className={`font-bold text-3xl ${
                   index !== 0 ? "opacity-0" : ""
-                } text-black `}
+                } text-black  tracking-widest uppercase`}
               >
                 Experience
               </h1>
