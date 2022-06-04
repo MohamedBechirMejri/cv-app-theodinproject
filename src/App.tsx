@@ -17,7 +17,8 @@ function App() {
     country: "Tunisia",
     profession: "Web Developer",
     website: "MohamedBechirMejri.dev",
-    about: "lorem ipsum",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequatur tempore a odit dolores nobis sed consequuntur laudantium, vero itaque iure eveniet, perspiciatis deleniti unde provident veniam saepe ratione voluptatibus.",
     socialLinks: {
       facebook: "",
       twitter: "MohamedBechirMe",
