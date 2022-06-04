@@ -2,7 +2,11 @@ import React from "react";
 
 function App() {
   const [data, setData] = React.useState({
-    name: "",
+    name: {
+      first: "",
+      last: "",
+      middle: "",
+    },
     phoneNumber: "",
     email: "",
     address: "",
