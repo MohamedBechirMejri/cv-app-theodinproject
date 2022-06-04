@@ -5,7 +5,7 @@ import Address from "./Address";
 
 const Preview = ({ data }: { data: CvData }) => {
   return (
-    <div>
+    <div className="select-none">
       <Name
         firstName={data.name.first}
         lastName={data.name.last}
