@@ -10,15 +10,19 @@ import Experience from "./Experience";
 const Preview = ({ data }: { data: CvData }) => {
   return (
     <div className="flex flex-col items-center max-w-6xl gap-16 p-8 px-16 m-auto select-none">
-      <div className="flex items-end gap-8">
+      <div className="flex items-start gap-8">
         {" "}
         <Name
           firstName={data.name.first}
           lastName={data.name.last}
           middleName={data.name.middle}
         />
-        <div className="flex items-end justify-between w-full gap-10 ">
-          <ContactInfo phoneNumber={data.phoneNumber} email={data.email} />{" "}
+        <div className="flex items-start justify-between w-full gap-10 ">
+          <ContactInfo
+            website={data.website}
+            phoneNumber={data.phoneNumber}
+            email={data.email}
+          />{" "}
           <Address
             address={data.address}
             city={data.city}
