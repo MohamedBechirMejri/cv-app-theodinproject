@@ -5,6 +5,7 @@ import Address from "./Address";
 import ContactInfo from "./ContactInfo";
 import About from "./About";
 import Education from "./Education";
+import Experience from "./Experience";
 
 const Preview = ({ data }: { data: CvData }) => {
   return (
@@ -23,6 +24,7 @@ const Preview = ({ data }: { data: CvData }) => {
       <ContactInfo phoneNumber={data.phoneNumber} email={data.email} />
       <About about={data.about} />
       <Education education={data.education} />
+      <Experience experience={data.experience} />
     </div>
   );
 };
