@@ -2,6 +2,7 @@ import React from "react";
 import CvData from "../../Types/CvData";
 import Name from "./Name";
 import Address from "./Address";
+import ContactInfo from "./ContactInfo";
 
 const Preview = ({ data }: { data: CvData }) => {
   return (
@@ -17,6 +18,7 @@ const Preview = ({ data }: { data: CvData }) => {
         state={data.state}
         country={data.country}
       />
+      <ContactInfo phoneNumber={data.phoneNumber} email={data.email} />
     </div>
   );
 };
