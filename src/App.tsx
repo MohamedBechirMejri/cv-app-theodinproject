@@ -12,6 +12,14 @@ function App() {
     profession: "",
     website: "",
     about: "",
+    socialLinks: {
+      facebook: "",
+      twitter: "",
+      linkedin: "",
+      instagram: "",
+      github: "",
+      youtube: "",
+    },
     education: [
       {
         school: "",
