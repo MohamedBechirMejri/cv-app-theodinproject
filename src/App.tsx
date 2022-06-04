@@ -1,4 +1,6 @@
 import React from "react";
+import Preview from "./Components/Preview/Preview";
+import Edit from "./Components/Edit/Edit";
 
 function App() {
   const [data, setData] = React.useState({
@@ -52,7 +54,12 @@ function App() {
       },
     ],
   });
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Preview data={data} />
+      <Edit data={data} setData={setData} />
+    </div>
+  );
 }
 
 export default App;
