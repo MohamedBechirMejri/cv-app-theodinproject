@@ -7,7 +7,8 @@ type CvData = {
   phoneNumber: string;
   email: string;
   address: string;
-  city: string; 
+  city: string;
+  state: string;
   country: string;
   profession: string;
   website: string;
