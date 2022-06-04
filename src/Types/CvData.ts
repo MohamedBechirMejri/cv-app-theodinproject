@@ -1,14 +1,13 @@
 type CvData = {
   name: {
     first: string;
-    last: string;
     middle: string;
+    last: string;
   };
   phoneNumber: string;
   email: string;
   address: string;
-  city: string;
-  state: string;
+  city: string; 
   country: string;
   profession: string;
   website: string;
