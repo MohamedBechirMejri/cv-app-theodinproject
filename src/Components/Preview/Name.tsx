@@ -9,7 +9,13 @@ const Name = ({
   lastName: string;
   middleName: string;
 }) => {
-  return <div></div>;
+  return (
+    <h1 className="flex flex-col items-end w-max font-bold text-4xl">
+      <span className="bg-yellow-400">{firstName} </span>
+      {middleName && <span> {middleName}</span>}
+      <span> {lastName}</span>
+    </h1>
+  );
 };
 
 export default Name;
