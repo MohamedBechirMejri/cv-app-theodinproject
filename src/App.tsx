@@ -113,13 +113,13 @@ function App() {
     interests: ["Coding", "Reading", "Traveling"],
   });
 
-  const [isEditing, setIsEditing] = React.useState(true);
+  const [isEditing, setIsEditing] = React.useState(false);
   return (
     <div className="App">
       {isEditing ? (
         <Edit data={data} setData={setData} setIsEditing={setIsEditing} />
       ) : (
-        <Preview data={data} />
+        <Preview data={data} setIsEditing={setIsEditing} />
       )}
     </div>
   );

@@ -10,8 +10,15 @@ import Skills from "./Skills";
 import Languages from "./Languages";
 import Interests from "./Interests";
 import SocialPresence from "./SocialPresence";
+import Button from "../Edit/Button";
 
-const Preview = ({ data }: { data: CvData }) => {
+const Preview = ({
+  data,
+  setIsEditing,
+}: {
+  data: CvData;
+  setIsEditing: any;
+}) => {
   return (
     <div className="flex flex-col items-center max-w-[80rem] gap-16 p-8 px-16 pb-32 m-auto select-none">
       <div className="flex items-start gap-14">
@@ -44,6 +51,10 @@ const Preview = ({ data }: { data: CvData }) => {
       <Languages languages={data.languages} />
       <Interests interests={data.interests} />
       <SocialPresence socialLinks={data.socialLinks} />
+      <div className="text-2xl">
+        <Button handler={() => setIsEditing(true)} text="Back" />
+        <Button handler={() => console.log("print")} text="Print" />
+      </div>
     </div>
   );
 };
