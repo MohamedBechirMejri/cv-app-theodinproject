@@ -174,8 +174,6 @@ const Edit = ({
     setInterest("");
   };
 
-
-
   return (
     <form>
       <div className="form-group">
