@@ -1,6 +1,7 @@
 import React from "react";
 import CvData from "../../Types/CvData";
 import FormGroup from "./FormGroup";
+import Button from "./Button";
 
 const Edit = ({
   data,
@@ -410,9 +411,7 @@ const Edit = ({
               onChange={e => setDescriptionEdu(e.target.value)}
             />
           </div>
-          <button className="" onClick={e => handleEducationSubmit(e)}>
-            Add
-          </button>
+          <Button handler={handleEducationSubmit} text="Add" />
         </div>
       </div>
       <div>
