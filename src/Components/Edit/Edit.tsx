@@ -107,6 +107,16 @@ const Edit = ({
     setEndDateEdu("");
   };
 
+  const removeEducation = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    index: number
+  ) => {
+    e.preventDefault();
+    const newEducation = [...education];
+    newEducation.splice(index, 1);
+    setEducation(newEducation);
+  };
+
   const handleExperienceSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setExperience([
@@ -397,7 +407,7 @@ const Edit = ({
               <p>description: {edu.description}</p>
               <button
                 className="btn btn-danger"
-                onClick={() => removeEducation(i)}
+                onClick={e => removeEducation(e, i)}
               >
                 remove
               </button>
