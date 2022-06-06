@@ -24,7 +24,7 @@ const Preview = ({ data }: { data: CvData }) => {
         />
         <div className="flex items-start justify-between w-full gap-10 ">
           <ContactInfo
-            website={data.website}
+            linkedin={data.socialLinks.linkedin}
             phoneNumber={data.phoneNumber}
             email={data.email}
           />{" "}
