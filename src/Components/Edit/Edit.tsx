@@ -155,6 +155,19 @@ const Edit = ({
     setLanguageProficiency("");
   };
 
+  const handleToolSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setTools([
+      ...tools,
+      {
+        tool: tool,
+        level: toolLevel,
+      },
+    ]);
+    setTool("");
+    setToolLevel(0);
+  };
+
   return (
     <form>
       <div className="form-group">
