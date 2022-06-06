@@ -338,7 +338,7 @@ const Edit = ({
             type="email"
           />
         </fieldset>
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Location</legend>{" "}
           <FormGroup
             label="Address"
@@ -355,7 +355,7 @@ const Edit = ({
             f={setCountry}
           />
         </fieldset>
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Other</legend>{" "}
           <FormGroup
             label="Profession"
@@ -371,7 +371,7 @@ const Edit = ({
           />
           <FormGroup label="About" id="about" value={about} f={setAbout} />
         </fieldset>
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Social Links</legend>{" "}
           <FormGroup
             label="Facebook"
@@ -428,7 +428,7 @@ const Edit = ({
             );
           })}
         </div>{" "}
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Education</legend>
           <FormGroup label="School" id="school" value={school} f={setSchool} />
           <FormGroup label="Degree" id="degree" value={degree} f={setDegree} />
@@ -447,10 +447,15 @@ const Edit = ({
             type="number"
           />
 
-          <div className="">
-            <label htmlFor="descriptionEdu">Description</label>
+          <div className="flex flex-col">
+            <label
+              className="w-full font-bold text-left"
+              htmlFor="descriptionEdu"
+            >
+              Description
+            </label>
             <textarea
-              className=""
+              className="p-2 text-center skew-x-6 bg-yellow-400 border border-black placeholder:text-black"
               id="descriptionEdu"
               rows={3}
               placeholder="Description"
@@ -477,7 +482,7 @@ const Edit = ({
             );
           })}
         </div>
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Experience</legend>
           <FormGroup
             label="Company"
@@ -505,10 +510,15 @@ const Edit = ({
             f={setEndDateExp}
             type="number"
           />
-          <div className="">
-            <label htmlFor="descriptionExp">Description</label>
+          <div className="flex flex-col">
+            <label
+              className="w-full font-bold text-left"
+              htmlFor="descriptionExp"
+            >
+              Description
+            </label>
             <textarea
-              className=""
+              className="p-2 text-center skew-x-6 bg-yellow-400 border border-black placeholder:text-black"
               id="descriptionExp"
               rows={3}
               placeholder="Description"
@@ -531,7 +541,7 @@ const Edit = ({
             );
           })}
         </div>
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Skills</legend>
           <FormGroup label="Skill" id="skill" value={skill} f={setSkill} />
           <div className="">
@@ -570,7 +580,7 @@ const Edit = ({
             );
           })}
         </div>{" "}
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Languages</legend>
           <FormGroup
             label="Language"
@@ -610,7 +620,7 @@ const Edit = ({
             );
           })}
         </div>{" "}
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Tools</legend>
           <FormGroup label="Tool" id="tool" value={tool} f={setTool} />
 
@@ -630,7 +640,7 @@ const Edit = ({
           </div>
           <Button handler={handleToolSubmit} />
         </fieldset>
-        <fieldset className="p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Interests</legend>
           {interests.map((interest, i) => {
             return (
@@ -642,15 +652,14 @@ const Edit = ({
               </div>
             );
           })}
-          <div>
-            <FormGroup
-              label="Interest"
-              id="interest"
-              value={interest}
-              f={setInterest}
-            />
-            <Button handler={handleInterestSubmit} />
-          </div>
+
+          <FormGroup
+            label="Interest"
+            id="interest"
+            value={interest}
+            f={setInterest}
+          />
+          <Button handler={handleInterestSubmit} />
         </fieldset>
       </form>{" "}
       <div className="text-2xl">
