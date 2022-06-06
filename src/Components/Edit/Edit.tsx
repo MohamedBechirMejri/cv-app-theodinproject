@@ -140,6 +140,17 @@ const Edit = ({
     setDescriptionExp("");
   };
 
+  const removeExperience = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    index: number
+  ) => {
+    e.preventDefault();
+    const newExperience = [...experience];
+    newExperience.splice(index, 1);
+    setExperience(newExperience);
+  };
+  
+
   const handleSkillSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSkills([
