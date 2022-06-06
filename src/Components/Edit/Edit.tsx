@@ -363,19 +363,10 @@ const Edit = ({
         f={setInstagram}
       />
       <FormGroup label="Github" id="github" value={github} f={setGithub} />
+      <FormGroup label="Discord" id="discord" value={discord} f={setDiscord} />
+      <FormGroup label="Discord" id="discord" value={discord} f={setDiscord} />
 
-    
-      <div className="">
-        <label htmlFor="discord">Discord</label>
-        <input
-          type="text"
-          className=""
-          id="discord"
-          placeholder="Github"
-          value={discord}
-          onChange={e => setDiscord(e.target.value)}
-        />
-      </div>
+
       <div className="">
         {education.map((edu, i) => {
           return (
