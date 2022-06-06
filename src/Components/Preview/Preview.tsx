@@ -30,16 +30,12 @@ const Preview = ({ data }: { data: CvData }) => {
             state={data.state}
             country={data.country}
           />
-          <Skills
-            skills={data.skills}
-            languages={data.languages}
-            tools={data.tools}
-          />
         </div>
       </div>
       <About about={data.about} />
       <Education education={data.education} />
       <Experience experience={data.experience} />
+      <Skills skills={data.skills} />
     </div>
   );
 };
