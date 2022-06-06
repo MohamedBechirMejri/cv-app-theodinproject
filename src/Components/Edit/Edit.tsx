@@ -563,17 +563,7 @@ const Edit = ({
         })}
         <div>
           <FormGroup label="Tool" id="tool" value={tool} f={setTool} />
-          <div className="">
-            <label htmlFor="tool">Tool</label>
-            <input
-              type="text"
-              className=""
-              id="tool"
-              placeholder="Tool"
-              value={tool}
-              onChange={e => setTool(e.target.value)}
-            />
-          </div>
+
           <div className="">
             <label htmlFor="toolLevel">Tool Level</label>
             <input
@@ -588,9 +578,7 @@ const Edit = ({
             />
             <p>{toolLevel}%</p>
           </div>
-          <button className="" onClick={e => handleToolSubmit(e)}>
-            Add
-          </button>
+          <Button handler={handleToolSubmit} />
         </div>
       </div>
       <div>
