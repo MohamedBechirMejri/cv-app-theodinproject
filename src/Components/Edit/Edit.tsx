@@ -587,14 +587,22 @@ const Edit = ({
           />
           <Button handler={handleSkillSubmit} />
         </fieldset>
-        <div className="">
+        <div className="flex flex-col items-center justify-center gap-4">
           {languages.map((language, i) => {
             return (
-              <div key={i}>
-                <h3>Language: {language.language}</h3>
-                <h3>Proficiency: {language.proficiency}</h3>
-                <button className="" onClick={e => removeLanguage(e, i)}>
-                  remove
+              <div
+                key={i}
+                className="flex items-center justify-between w-full gap-2"
+              >
+                <h3 className="font-bold">
+                  {" "}
+                  {language.language}: {language.proficiency}
+                </h3>
+                <button
+                  className="p-1 px-2 text-xs text-white transition-all bg-red-400 rounded-full hover:bg-red-500"
+                  onClick={e => removeLanguage(e, i)}
+                >
+                  X
                 </button>
               </div>
             );
@@ -617,9 +625,7 @@ const Edit = ({
               value={languageProficiency}
               onChange={e => setLanguageProficiency(e.target.value)}
             >
-              <option value="Beginner" selected>
-                Beginner
-              </option>
+              <option value="Beginner">Beginner</option>
               <option value="Conversational">Conversational</option>
               <option value="Fluent">Fluent</option>
               <option value="Native">Native</option>
