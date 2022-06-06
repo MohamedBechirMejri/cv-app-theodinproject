@@ -614,6 +614,17 @@ const Edit = ({
 
             <p>{skillLevel}%</p>
           </div>
+          <div className="">
+            <label htmlFor="skillYears">Years of Experience</label>
+            <input
+              type="number"
+              className=""
+              id="skillYears"
+              placeholder="Years of Experience"
+              value={skillYears}
+              onChange={e => setSkillYears(e.target.value)}
+            />
+          </div>
           <button className="" onClick={e => handleSkillSubmit(e)}>
             Add
           </button>
