@@ -166,6 +166,17 @@ const Edit = ({
     setSkillYears("");
   };
 
+  const removeSkill = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    index: number
+  ) => {
+    e.preventDefault();
+    const newSkills = [...skills];
+    newSkills.splice(index, 1);
+    setSkills(newSkills);
+  };
+  
+
   const handleLanguageSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLanguages([
