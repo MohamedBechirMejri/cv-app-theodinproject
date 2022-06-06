@@ -88,6 +88,25 @@ const Edit = ({
     });
   };
 
+  const handleEducationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setEducation([
+      ...education,
+      {
+        school,
+        degree,
+        description: descriptionEdu,
+        startDate: startDateEdu,
+        endDate: endDateEdu,
+      },
+    ]);
+    setSchool("");
+    setDegree("");
+    setDescriptionEdu("");
+    setStartDateEdu("");
+    setEndDateEdu("");
+  };
+
 
 
   return (
