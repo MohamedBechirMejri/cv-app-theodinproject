@@ -398,7 +398,7 @@ const Edit = ({
       <div className="form-group">
         {education.map((edu, i) => {
           return (
-            <div>
+            <div key={i}>
               <h3>School: {edu.school}</h3>
               <h3>Degree: {edu.degree}</h3>
               <h3>
