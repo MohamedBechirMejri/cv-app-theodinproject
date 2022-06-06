@@ -218,6 +218,16 @@ const Edit = ({
     setToolLevel(0);
   };
 
+  const removeTool = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    index: number
+  ) => {
+    e.preventDefault();
+    const newTools = [...tools];
+    newTools.splice(index, 1);
+    setTools(newTools);
+  };
+
   const handleInterestSubmit = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
@@ -688,6 +698,49 @@ const Edit = ({
             </select>
           </div>
           <button className="" onClick={e => handleLanguageSubmit(e)}>
+            Add
+          </button>
+        </div>
+      </div>
+      <div>
+        {tools.map((tool, i) => {
+          return (
+            <div key={i}>
+              <h3>Tool: {tool.tool}</h3>
+              <h3>Level: {tool.level}</h3>
+              <button className="" onClick={e => removeTool(e, i)}>
+                remove
+              </button>
+            </div>
+          );
+        })}
+        <div>
+          <div className="">
+            <label htmlFor="tool">Tool</label>
+            <input
+              type="text"
+              className=""
+              id="tool"
+              placeholder="Tool"
+              value={tool}
+              onChange={e => setTool(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="toolLevel">Tool Level</label>
+            <input
+              type="range"
+              min={0}
+              max={100}
+              className=""
+              id="toolLevel"
+              placeholder="Tool Level"
+              value={toolLevel}
+              onChange={e => setToolLevel(Number(e.target.value))}
+            />
+            <p>{toolLevel}%</p>
+          </div>
+          <button className="" onClick={e => handleToolSubmit(e)}>
             Add
           </button>
         </div>
