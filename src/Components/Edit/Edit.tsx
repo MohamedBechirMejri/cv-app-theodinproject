@@ -431,50 +431,32 @@ const Edit = ({
           );
         })}
         <div>
-          <div className="">
-            <label htmlFor="company">Company</label>
-            <input
-              type="text"
-              className=""
-              id="company"
-              placeholder="Company"
-              value={company}
-              onChange={e => setCompany(e.target.value)}
-            />
-          </div>
-          <div className="">
-            <label htmlFor="position">Position</label>
-            <input
-              type="text"
-              className=""
-              id="position"
-              placeholder="Position"
-              value={position}
-              onChange={e => setPosition(e.target.value)}
-            />
-          </div>
-          <div className="">
-            <label htmlFor="startDateExp">Start Date</label>
-            <input
-              type="number"
-              className=""
-              id="startDateExp"
-              placeholder="Start Date"
-              value={startDateExp}
-              onChange={e => setStartDateExp(e.target.value)}
-            />
-          </div>
-          <div className="">
-            <label htmlFor="endDateExp">End Date</label>
-            <input
-              type="number"
-              className=""
-              id="endDateExp"
-              placeholder="End Date"
-              value={endDateExp}
-              onChange={e => setEndDateExp(e.target.value)}
-            />
-          </div>
+          <FormGroup
+            label="Company"
+            id="company"
+            value={company}
+            f={setCompany}
+          />
+          <FormGroup
+            label="Position"
+            id="position"
+            value={position}
+            f={setPosition}
+          />
+          <FormGroup
+            label="Start Date"
+            id="startDateExp"
+            value={startDateExp}
+            f={setStartDateExp}
+            type="number"
+          />
+          <FormGroup
+            label="End Date"
+            id="endDateExp"
+            value={endDateExp}
+            f={setEndDateExp}
+            type="number"
+          />
           <div className="">
             <label htmlFor="descriptionExp">Description</label>
             <textarea
@@ -486,9 +468,7 @@ const Edit = ({
               onChange={e => setDescriptionExp(e.target.value)}
             />
           </div>
-          <button className="" onClick={e => handleExperienceSubmit(e)}>
-            Add
-          </button>
+          <Button handler={handleExperienceSubmit} text="Add" />
         </div>
       </div>
       <div>
