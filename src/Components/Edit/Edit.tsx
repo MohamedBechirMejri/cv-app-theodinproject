@@ -236,6 +236,16 @@ const Edit = ({
     setInterest("");
   };
 
+  const removeInterest = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    index: number
+  ) => {
+    e.preventDefault();
+    const newInterests = [...interests];
+    newInterests.splice(index, 1);
+    setInterests(newInterests);
+  };
+
   return (
     <form>
       <div className="">
@@ -741,6 +751,35 @@ const Edit = ({
             <p>{toolLevel}%</p>
           </div>
           <button className="" onClick={e => handleToolSubmit(e)}>
+            Add
+          </button>
+        </div>
+      </div>
+      <div>
+        <h2>Interests</h2>
+        {interests.map((interest, i) => {
+          return (
+            <div key={i}>
+              <h3>- {interest}</h3>
+              <button className="" onClick={e => removeInterest(e, i)}>
+                remove
+              </button>
+            </div>
+          );
+        })}
+        <div>
+          <div className="">
+            <label htmlFor="interest">Interest</label>
+            <input
+              type="text"
+              className=""
+              id="interest"
+              placeholder="Interest"
+              value={interest}
+              onChange={e => setInterest(e.target.value)}
+            />
+          </div>
+          <button className="" onClick={e => handleInterestSubmit(e)}>
             Add
           </button>
         </div>
