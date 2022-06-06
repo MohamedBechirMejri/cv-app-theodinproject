@@ -299,17 +299,13 @@ const Edit = ({
 
   return (
     <form>
-      <div className="">
-        <label htmlFor="firstName">First Name</label>
-        <input
-          type="text"
-          className=""
-          id="firstName"
-          placeholder="First Name"
-          value={firstName}
-          onChange={e => setFirstName(e.target.value)}
-        />
-      </div>
+      <FormGroup
+        label="First Name"
+        id="firstName"
+        value={firstName}
+        f={setFirstName}
+        type="text"
+      />
       <FormGroup
         label="Last Name"
         id="lastName"
@@ -317,19 +313,6 @@ const Edit = ({
         f={setLastName}
         type="text"
       />
-
-
-      <div className="">
-        <label htmlFor="lastName">Last Name</label>
-        <input
-          type="text"
-          className=""
-          id="lastName"
-          placeholder="Last Name"
-          value={lastName}
-          onChange={e => setLastName(e.target.value)}
-        />
-      </div>
       <div className="">
         <label htmlFor="middleName">Middle Name</label>
         <input
