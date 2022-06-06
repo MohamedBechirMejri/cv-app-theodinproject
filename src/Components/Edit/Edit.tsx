@@ -320,17 +320,14 @@ const Edit = ({
         f={setLastName}
         type="text"
       />
-      <div className="">
-        <label htmlFor="phoneNumber">Phone Number</label>
-        <input
-          type="text"
-          className=""
-          id="phoneNumber"
-          placeholder="Phone Number"
-          value={phoneNumber}
-          onChange={e => setPhoneNumber(e.target.value)}
-        />
-      </div>
+      <FormGroup
+        label="Phone Number"
+        id="phoneNumber"
+        value={phoneNumber}
+        f={setPhoneNumber}
+        type="text"
+      />
+       
       <div className="">
         <label htmlFor="email">Email</label>
         <input
