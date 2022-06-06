@@ -52,7 +52,7 @@ const Edit = ({
   const [interests, setInterests] = React.useState(data.interests);
   const [interest, setInterest] = React.useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     setData({
       name: {
@@ -87,6 +87,56 @@ const Edit = ({
       interests: interests,
     });
   };
+
+  const handleReset = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    setFirstName('')
+    setLastName('')
+    setMiddleName('')
+    setPhoneNumber('')
+    setEmail('')
+    setAddress('')
+    setCity('')
+    setState('')
+    setCountry('')
+    setProfession('')
+    setWebsite('')
+    setAbout('')
+    setFacebook('')
+    setTwitter('')
+    setLinkedin('')
+    setInstagram('')
+    setGithub('')
+    setYoutube('')
+    setDiscord('')
+    setEducation([])
+    setSchool('')
+    setDegree('')
+    setDescriptionEdu('')
+    setStartDateEdu('')
+    setEndDateEdu('')
+    setExperience([])
+    setCompany('')
+    setPosition('')
+    setStartDateExp('')
+    setEndDateExp('')
+    setDescriptionExp('')
+    setSkills([])
+    setSkill('')
+    setSkillLevel(0)
+    setSkillYears('')
+    setLanguages([])
+    setLanguage('')
+    setLanguageProficiency('')
+    setTools([])
+    setTool('')
+    setToolLevel(0)
+    setInterests([])
+    setInterest('')
+    
+  };
+
+
 
   const handleEducationSubmit = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -784,6 +834,22 @@ const Edit = ({
           </button>
         </div>
       </div>
+      <button
+        className=""
+        onClick={e => {
+          handleSubmit(e);
+        }}
+      >
+        Submit
+      </button>
+      <button
+        className=""
+        onClick={e => {
+          handleReset(e);
+        }}
+      >
+        Clear
+      </button>
     </form>
   );
 };
