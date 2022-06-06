@@ -168,6 +168,14 @@ const Edit = ({
     setToolLevel(0);
   };
 
+  const handleInterestSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setInterests([...interests, interest]);
+    setInterest("");
+  };
+
+
+
   return (
     <form>
       <div className="form-group">
