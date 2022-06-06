@@ -563,7 +563,9 @@ const Edit = ({
           <legend className="font-bold">Skills</legend>
           <FormGroup label="Skill" id="skill" value={skill} f={setSkill} />
           <div className="flex flex-col items-center justify-center w-full font-bold ">
-            <label className="w-full py-2 text-left" htmlFor="skillLevel">Skill Level</label>
+            <label className="w-full py-2 text-left" htmlFor="skillLevel">
+              Skill Level
+            </label>
             <input
               type="range"
               min={0}
@@ -642,13 +644,15 @@ const Edit = ({
           <legend className="font-bold">Tools</legend>
           <FormGroup label="Tool" id="tool" value={tool} f={setTool} />
 
-          <div className="">
-            <label htmlFor="toolLevel">Tool Level</label>
+          <div className="flex flex-col items-center justify-center w-full font-bold">
+            <label className="w-full py-2 text-left" htmlFor="toolLevel">
+              Level
+            </label>
             <input
               type="range"
               min={0}
               max={100}
-              className=""
+              className="slider"
               id="toolLevel"
               placeholder="Tool Level"
               value={toolLevel}
