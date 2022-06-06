@@ -107,6 +107,25 @@ const Edit = ({
     setEndDateEdu("");
   };
 
+  const handleExperienceSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setExperience([
+      ...experience,
+      {
+        company,
+        position,
+        startDate: startDateExp,
+        endDate: endDateExp,
+        description: descriptionExp,
+      },
+    ]);
+    setCompany("");
+    setPosition("");
+    setStartDateExp("");
+    setEndDateExp("");
+    setDescriptionExp("");
+  };
+
 
 
   return (
