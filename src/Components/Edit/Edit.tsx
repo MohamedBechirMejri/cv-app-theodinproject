@@ -342,19 +342,14 @@ const Edit = ({
       />
       <FormGroup label="Website" id="website" value={website} f={setWebsite} />
       <FormGroup label="About" id="about" value={about} f={setAbout} />
+      <FormGroup
+        label="Facebook"
+        id="facebook"
+        value={facebook}
+        f={setFacebook}
+      />
 
       
-      <div className="">
-        <label htmlFor="facebook">Facebook</label>
-        <input
-          type="text"
-          className=""
-          id="facebook"
-          placeholder="Facebook"
-          value={facebook}
-          onChange={e => setFacebook(e.target.value)}
-        />
-      </div>
       <div className="">
         <label htmlFor="twitter">Twitter</label>
         <input
