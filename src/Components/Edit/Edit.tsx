@@ -382,50 +382,23 @@ const Edit = ({
           );
         })}
         <div>
-          <div className="">
-            <label htmlFor="school">School</label>
-            <input
-              type="text"
-              className=""
-              id="school"
-              placeholder="School"
-              value={school}
-              onChange={e => setSchool(e.target.value)}
-            />
-          </div>
-          <div className="">
-            <label htmlFor="degree">Degree</label>
-            <input
-              type="text"
-              className=""
-              id="degree"
-              placeholder="Degree"
-              value={degree}
-              onChange={e => setDegree(e.target.value)}
-            />
-          </div>
-          <div className="">
-            <label htmlFor="startDate">Start Date</label>
-            <input
-              type="number"
-              className=""
-              id="startDate"
-              placeholder="Start Date"
-              value={startDateEdu}
-              onChange={e => setStartDateEdu(e.target.value)}
-            />
-          </div>
-          <div className="">
-            <label htmlFor="endDate">End Date</label>
-            <input
-              type="number"
-              className=""
-              id="endDate"
-              placeholder="End Date"
-              value={endDateEdu}
-              onChange={e => setEndDateEdu(e.target.value)}
-            />
-          </div>
+          <FormGroup label="School" id="school" value={school} f={setSchool} />
+          <FormGroup label="Degree" id="degree" value={degree} f={setDegree} />
+          <FormGroup
+            label="Start Date"
+            id="startDateEdu"
+            value={startDateEdu}
+            f={setStartDateEdu}
+            type="number"
+          />
+          <FormGroup
+            label="End Date"
+            id="endDateEdu"
+            value={endDateEdu}
+            f={setEndDateEdu}
+            type="number"
+          />
+
           <div className="">
             <label htmlFor="descriptionEdu">Description</label>
             <textarea
