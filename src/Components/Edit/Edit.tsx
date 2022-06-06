@@ -421,10 +421,13 @@ const Edit = ({
                 <h3 className="font-bold"> {edu.school}</h3>
                 <h3> {edu.degree}</h3>
                 <h3>
-                  Years: {edu.startDate} - {edu.endDate}
+                  {edu.startDate} - {edu.endDate}
                 </h3>
-                <p className="max-w-lg text-justify">description: {edu.description}</p>
-                <button className="p-1 px-4 text-white transition-all bg-red-400 hover:bg-red-500" onClick={e => removeEducation(e, i)}>
+                <p className="max-w-lg text-justify">{edu.description}</p>
+                <button
+                  className="p-1 px-4 text-white transition-all bg-red-400 hover:bg-red-500"
+                  onClick={e => removeEducation(e, i)}
+                >
                   remove
                 </button>
               </div>
@@ -468,17 +471,23 @@ const Edit = ({
           </div>
           <Button handler={handleEducationSubmit} />
         </fieldset>
-        <div>
+        <div className="flex flex-col items-center justify-center gap-4">
           {experience.map((exp, i) => {
             return (
-              <div key={i}>
-                <h3>Company: {exp.company}</h3>
-                <h3>Position: {exp.position}</h3>
+              <div
+                key={i}
+                className="flex flex-col items-center justify-center gap-2"
+              >
+                <h3 className="font-bold"> {exp.company}</h3>
+                <h3> {exp.position}</h3>
                 <h3>
-                  Years: {exp.startDate} - {exp.endDate}
+                  {exp.startDate} - {exp.endDate}
                 </h3>
-                <p>description: {exp.description}</p>
-                <button className="" onClick={e => removeExperience(e, i)}>
+                <p className="max-w-lg text-justify"> {exp.description}</p>
+                <button
+                  className="p-1 px-4 text-white transition-all bg-red-400 hover:bg-red-500"
+                  onClick={e => removeExperience(e, i)}
+                >
                   remove
                 </button>
               </div>
