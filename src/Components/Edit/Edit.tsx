@@ -303,38 +303,33 @@ const Edit = ({
         label="First Name"
         id="firstName"
         value={firstName}
-        f={setFirstName}
-        type="text"
+        f={setFirstName} 
       />
       <FormGroup
         label="Middle Name"
         id="middleName"
         value={middleName}
         f={setMiddleName}
-        type="text"
       />
       <FormGroup
         label="Last Name"
         id="lastName"
         value={lastName}
         f={setLastName}
-        type="text"
       />
       <FormGroup
         label="Phone Number"
         id="phoneNumber"
         value={phoneNumber}
         f={setPhoneNumber}
-        type="text"
       />
       <FormGroup
         label="Email"
         id="email"
         value={email}
         f={setEmail}
-        type="text"
       />
-      
+
       <div className="">
         <label htmlFor="address">Address</label>
         <input

@@ -5,7 +5,7 @@ const FormGroup = ({
   f,
   value,
   id,
-  type,
+  type = "text",
   ClassName = "",
   inputClassName = "",
 }: {
@@ -14,7 +14,7 @@ const FormGroup = ({
   value: any;
   id: string;
   ClassName?: string;
-  type: string;
+  type?: string;
   inputClassName?: string;
 }) => {
   return (
