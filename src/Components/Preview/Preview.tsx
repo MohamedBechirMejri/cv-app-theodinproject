@@ -9,6 +9,7 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import Languages from "./Languages";
 import Interests from "./Interests";
+import SocialPresence from "./SocialPresence";
 
 const Preview = ({ data }: { data: CvData }) => {
   return (
@@ -42,6 +43,7 @@ const Preview = ({ data }: { data: CvData }) => {
       <Skills skills={data.skills} tools={data.tools} />
       <Languages languages={data.languages} />
       <Interests interests={data.interests} />
+      <SocialPresence socialLinks={data.socialLinks} />
     </div>
   );
 };
