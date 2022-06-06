@@ -36,7 +36,7 @@ const Preview = ({ data }: { data: CvData }) => {
       <About about={data.about} />
       <Education education={data.education} />
       <Experience experience={data.experience} />
-      <Skills skills={data.skills} />
+      <Skills skills={data.skills} tools={data.tools} />
       <Languages languages={data.languages} />
     </div>
   );
