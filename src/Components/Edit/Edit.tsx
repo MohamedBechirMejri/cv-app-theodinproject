@@ -126,6 +126,22 @@ const Edit = ({
     setDescriptionExp("");
   };
 
+  const handleSkillSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSkills([
+      ...skills,
+
+      {
+        skill: skill,
+        level: skillLevel,
+        yearsOfExperience: skillYears,
+      },
+    ]);
+    setSkill("");
+    setSkillLevel(0);
+    setSkillYears("");
+  };
+
 
 
   return (
