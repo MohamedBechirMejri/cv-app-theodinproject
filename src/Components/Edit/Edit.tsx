@@ -608,7 +608,7 @@ const Edit = ({
             );
           })}
         </div>{" "}
-        <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
+        <fieldset className="flex flex-col items-center gap-4 p-8 border border-black ">
           <legend className="font-bold">Languages</legend>
           <FormGroup
             label="Language"
@@ -616,8 +616,8 @@ const Edit = ({
             value={language}
             f={setLanguage}
           />
-          <div className="">
-            <label htmlFor="proficiency">Proficiency</label>
+          <div className="flex flex-col w-full font-bold">
+            <label className="text-left " htmlFor="proficiency">Proficiency</label>
             <select
               className=""
               id="proficiency"
