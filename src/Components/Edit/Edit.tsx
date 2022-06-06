@@ -362,19 +362,9 @@ const Edit = ({
         value={instagram}
         f={setInstagram}
       />
+      <FormGroup label="Github" id="github" value={github} f={setGithub} />
 
- 
-      <div className="">
-        <label htmlFor="github">Github</label>
-        <input
-          type="text"
-          className=""
-          id="github"
-          placeholder="Github"
-          value={github}
-          onChange={e => setGithub(e.target.value)}
-        />
-      </div>
+    
       <div className="">
         <label htmlFor="discord">Discord</label>
         <input
