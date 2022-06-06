@@ -307,23 +307,19 @@ const Edit = ({
         type="text"
       />
       <FormGroup
+        label="Middle Name"
+        id="middleName"
+        value={middleName}
+        f={setMiddleName}
+        type="text"
+      />
+      <FormGroup
         label="Last Name"
         id="lastName"
         value={lastName}
         f={setLastName}
         type="text"
       />
-      <div className="">
-        <label htmlFor="middleName">Middle Name</label>
-        <input
-          type="text"
-          className=""
-          id="middleName"
-          placeholder="Middle Name"
-          value={middleName}
-          onChange={e => setMiddleName(e.target.value)}
-        />
-      </div>
       <div className="">
         <label htmlFor="phoneNumber">Phone Number</label>
         <input
