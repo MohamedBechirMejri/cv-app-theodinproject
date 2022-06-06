@@ -178,7 +178,9 @@ const Edit = ({
     setSkills(newSkills);
   };
 
-  const handleLanguageSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleLanguageSubmit = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     setLanguages([
       ...languages,
@@ -191,7 +193,19 @@ const Edit = ({
     setLanguageProficiency("");
   };
 
-  const handleToolSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const removeLanguage = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    index: number
+  ) => {
+    e.preventDefault();
+    const newLanguages = [...languages];
+    newLanguages.splice(index, 1);
+    setLanguages(newLanguages);
+  };
+
+  const handleToolSubmit = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     setTools([
       ...tools,
@@ -204,7 +218,9 @@ const Edit = ({
     setToolLevel(0);
   };
 
-  const handleInterestSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleInterestSubmit = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     setInterests([...interests, interest]);
     setInterest("");
@@ -626,6 +642,52 @@ const Edit = ({
             />
           </div>
           <button className="" onClick={e => handleSkillSubmit(e)}>
+            Add
+          </button>
+        </div>
+      </div>
+      <div className="">
+        {languages.map((language, i) => {
+          return (
+            <div key={i}>
+              <h3>Language: {language.language}</h3>
+              <h3>Proficiency: {language.proficiency}</h3>
+              <button className="" onClick={e => removeLanguage(e, i)}>
+                remove
+              </button>
+            </div>
+          );
+        })}
+        <div>
+          <div className="">
+            <label htmlFor="language">Language</label>
+            <input
+              type="text"
+              className=""
+              id="language"
+              placeholder="Language"
+              value={language}
+              onChange={e => setLanguage(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="proficiency">Proficiency</label>
+            <select
+              className=""
+              id="proficiency"
+              placeholder="Proficiency"
+              value={languageProficiency}
+              onChange={e => setLanguageProficiency(e.target.value)}
+            >
+              <option value="Beginner" selected>
+                Beginner
+              </option>
+              <option value="Conversational">Conversational</option>
+              <option value="Fluent">Fluent</option>
+              <option value="Native">Native</option>
+            </select>
+          </div>
+          <button className="" onClick={e => handleLanguageSubmit(e)}>
             Add
           </button>
         </div>
