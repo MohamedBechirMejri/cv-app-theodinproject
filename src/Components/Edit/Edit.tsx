@@ -340,18 +340,9 @@ const Edit = ({
         value={profession}
         f={setProfession}
       />
+      <FormGroup label="Website" id="website" value={website} f={setWebsite} />
 
-      <div className="">
-        <label htmlFor="website">Website</label>
-        <input
-          type="text"
-          className=""
-          id="website"
-          placeholder="Website"
-          value={website}
-          onChange={e => setWebsite(e.target.value)}
-        />
-      </div>
+     
       <div className="">
         <label htmlFor="about">About</label>
         <textarea
