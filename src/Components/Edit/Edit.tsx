@@ -411,17 +411,20 @@ const Edit = ({
             f={setDiscord}
           />
         </fieldset>
-        <div className="">
+        <div className="flex flex-col items-center justify-center gap-4">
           {education.map((edu, i) => {
             return (
-              <div key={i}>
-                <h3>School: {edu.school}</h3>
-                <h3>Degree: {edu.degree}</h3>
+              <div
+                key={i}
+                className="flex flex-col items-center justify-center gap-2"
+              >
+                <h3 className="font-bold"> {edu.school}</h3>
+                <h3> {edu.degree}</h3>
                 <h3>
                   Years: {edu.startDate} - {edu.endDate}
                 </h3>
-                <p>description: {edu.description}</p>
-                <button className="" onClick={e => removeEducation(e, i)}>
+                <p className="max-w-lg text-justify">description: {edu.description}</p>
+                <button className="p-1 px-4 text-white transition-all bg-red-400 hover:bg-red-500" onClick={e => removeEducation(e, i)}>
                   remove
                 </button>
               </div>
