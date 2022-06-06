@@ -8,21 +8,28 @@ const FormGroup = ({
   type = "text",
   ClassName = "",
   inputClassName = "",
+  labelClassName = "",
 }: {
+  type?: string;
   label: string;
   f: any;
   value: any;
   id: string;
   ClassName?: string;
-  type?: string;
   inputClassName?: string;
+  labelClassName?: string;
 }) => {
   return (
-    <div className={"" + ClassName}>
-      <label htmlFor={id}>{label}</label>
+    <div className={"flex flex-col items-center justify-center" + ClassName}>
+      <label className="w-full text-lg font-bold text-left" htmlFor={id}>
+        {label}
+      </label>
       <input
         type={type}
-        className={"" + inputClassName}
+        className={
+          "border border-black text-center bg-yellow-400 placeholder:text-black hover:bg-yellow-500 transition-all skew-x-6 outline-none focus:bg-yellow-600 selection:bg-yellow-800 selection:text-white p-1" +
+          inputClassName
+        }
         id={id}
         placeholder={label}
         value={value}
