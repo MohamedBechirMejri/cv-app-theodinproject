@@ -53,7 +53,7 @@ const Preview = ({
       <SocialPresence socialLinks={data.socialLinks} />
       <div className="text-2xl">
         <Button handler={() => setIsEditing(true)} text="Back" />
-        <Button handler={() => console.log("print")} text="Print" />
+        <Button handler={() => window.print()} text="Print" />
       </div>
     </div>
   );
