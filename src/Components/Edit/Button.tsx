@@ -3,11 +3,11 @@ import React from "react";
 const Button = ({
   ClassName = "",
   handler,
-  text,
+  text = "Add",
 }: {
   ClassName?: string;
   handler: any;
-  text: string;
+  text?: string;
 }) => {
   return (
     <button className={ClassName + ""} onClick={e => handler(e)}>
