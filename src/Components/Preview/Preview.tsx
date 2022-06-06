@@ -9,7 +9,7 @@ import Experience from "./Experience";
 
 const Preview = ({ data }: { data: CvData }) => {
   return (
-    <div className="flex flex-col items-center max-w-6xl gap-16 p-8 px-16 m-auto select-none">
+    <div className="flex flex-col items-center max-w-6xl gap-16 p-8 px-16 pb-32 m-auto select-none">
       <div className="flex items-start gap-8">
         {" "}
         <Name
