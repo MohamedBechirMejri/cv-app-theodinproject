@@ -119,7 +119,9 @@ const Edit = ({
     setEducation(newEducation);
   };
 
-  const handleExperienceSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleExperienceSubmit = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     setExperience([
       ...experience,
@@ -470,6 +472,83 @@ const Edit = ({
             />
           </div>
           <button className="" onClick={e => handleEducationSubmit(e)}>
+            Add
+          </button>
+        </div>
+      </div>
+      <div>
+        {experience.map((exp, i) => {
+          return (
+            <div key={i}>
+              <h3>Company: {exp.company}</h3>
+              <h3>Position: {exp.position}</h3>
+              <h3>
+                Years: {exp.startDate} - {exp.endDate}
+              </h3>
+              <p>description: {exp.description}</p>
+              <button className="" onClick={e => removeExperience(e, i)}>
+                remove
+              </button>
+            </div>
+          );
+        })}
+        <div>
+          <div className="">
+            <label htmlFor="company">Company</label>
+            <input
+              type="text"
+              className=""
+              id="company"
+              placeholder="Company"
+              value={company}
+              onChange={e => setCompany(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="position">Position</label>
+            <input
+              type="text"
+              className=""
+              id="position"
+              placeholder="Position"
+              value={position}
+              onChange={e => setPosition(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="startDateExp">Start Date</label>
+            <input
+              type="number"
+              className=""
+              id="startDateExp"
+              placeholder="Start Date"
+              value={startDateExp}
+              onChange={e => setStartDateExp(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="endDateExp">End Date</label>
+            <input
+              type="number"
+              className=""
+              id="endDateExp"
+              placeholder="End Date"
+              value={endDateExp}
+              onChange={e => setEndDateExp(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="descriptionExp">Description</label>
+            <textarea
+              className=""
+              id="descriptionExp"
+              rows={3}
+              placeholder="Description"
+              value={descriptionExp}
+              onChange={e => setDescriptionExp(e.target.value)}
+            />
+          </div>
+          <button className="" onClick={e => handleExperienceSubmit(e)}>
             Add
           </button>
         </div>
