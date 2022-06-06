@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  FaGithub,
+  FaYoutube,
+  FaDiscord,
+  FaFacebookSquare,
+} from "react-icons/fa";
+import { BsInstagram, BsTwitter } from "react-icons/bs";
 
 const SocialPresence = ({
   socialLinks,
@@ -27,14 +34,29 @@ const SocialPresence = ({
           </h1>
           <p className="flex gap-1"></p>
         </div>
-        <div className="flex flex-wrap items-start justify-start gap-2">
-          {Object.entries(socialLinks).map((link, index) => {
-            return (
-              <h1 key={index} className="px-4 py-1 rounded-full">
-                {link}
-              </h1>
-            );
-          })}
+        <div className="flex flex-wrap items-start justify-start gap-4">
+          {Object.entries(socialLinks)
+            .filter(l => l[1] !== "" && l[0] !== "linkedin")
+            .map((link, index) => {
+              return (
+                <h1 key={index} className="flex gap-2">
+                  {link[0] === "facebook" ? (
+                    <FaFacebookSquare className="text-2xl" />
+                  ) : link[0] === "twitter" ? (
+                    <BsTwitter className="text-2xl" />
+                  ) : link[0] === "instagram" ? (
+                    <BsInstagram className="text-2xl" />
+                  ) : link[0] === "github" ? (
+                    <FaGithub className="text-2xl" />
+                  ) : link[0] === "youtube" ? (
+                    <FaYoutube className="text-2xl" />
+                  ) : link[0] === "discord" ? (
+                    <FaDiscord className="text-2xl" />
+                  ) : null}
+                  <span>{link[1]}</span>
+                </h1>
+              );
+            })}
         </div>
       </div>
     </div>
