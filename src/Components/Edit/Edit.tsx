@@ -1,5 +1,6 @@
 import React from "react";
 import CvData from "../../Types/CvData";
+import FormGroup from "./FormGroup";
 
 const Edit = ({
   data,
@@ -309,6 +310,15 @@ const Edit = ({
           onChange={e => setFirstName(e.target.value)}
         />
       </div>
+      <FormGroup
+        label="Last Name"
+        id="lastName"
+        value={lastName}
+        f={setLastName}
+        type="text"
+      />
+
+
       <div className="">
         <label htmlFor="lastName">Last Name</label>
         <input
