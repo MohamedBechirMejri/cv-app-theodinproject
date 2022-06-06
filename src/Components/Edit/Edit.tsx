@@ -594,20 +594,13 @@ const Edit = ({
           );
         })}
         <div>
-          <div className="">
-            <label htmlFor="interest">Interest</label>
-            <input
-              type="text"
-              className=""
-              id="interest"
-              placeholder="Interest"
-              value={interest}
-              onChange={e => setInterest(e.target.value)}
-            />
-          </div>
-          <button className="" onClick={e => handleInterestSubmit(e)}>
-            Add
-          </button>
+          <FormGroup
+            label="Interest"
+            id="interest"
+            value={interest}
+            f={setInterest}
+          />
+          <Button handler={handleInterestSubmit} />
         </div>
       </div>
       <button
