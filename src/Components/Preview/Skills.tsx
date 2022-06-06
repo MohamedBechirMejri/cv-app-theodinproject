@@ -18,16 +18,16 @@ const Skills = ({
     <div className="flex flex-col max-w-[52rem] w-full text-gray-700">
       {skills.map((skill, index) => {
         return (
-          <div key={index} className="flex w-full gap-16 font-medium">
+          <div key={index} className="flex w-full px-4 font-medium gap-11">
             <div className="flex flex-col items-end justify-start gap-6">
               <h1
-                className={`font-bold text-3xl ${
+                className={`font-bold text-2xl ${
                   index !== 0 ? "opacity-0" : ""
                 } text-black  tracking-widest uppercase`}
               >
                 Skills
               </h1>
-              <h1 className="text-3xl font-bold tracking-widest text-black uppercase opacity-0">
+              <h1 className="text-2xl font-bold tracking-widest text-black uppercase opacity-0">
                 experience
               </h1>
               <p className="flex gap-1"></p>
@@ -50,7 +50,7 @@ const Skills = ({
       })}
       {tools.map((tool, index) => {
         return (
-          <div key={index} className="flex w-full gap-16 font-medium">
+          <div key={index} className="flex w-full px-4 font-medium gap-11">
             <div className="flex flex-col items-end justify-start gap-2">
               <h1
                 className={`font-bold text-3xl ${
@@ -59,7 +59,7 @@ const Skills = ({
               >
                 Tools
               </h1>
-              <h1 className="text-3xl font-bold tracking-widest text-black uppercase opacity-0">
+              <h1 className="text-2xl font-bold tracking-widest text-black uppercase opacity-0">
                 experience
               </h1>
               <p className="flex gap-1"></p>
