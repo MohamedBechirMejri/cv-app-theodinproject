@@ -678,17 +678,24 @@ const Edit = ({
         </fieldset>
         <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Interests</legend>
-          {interests.map((interest, i) => {
-            return (
-              <div key={i}>
-                <h3>- {interest}</h3>
-                <button className="" onClick={e => removeInterest(e, i)}>
-                  remove
-                </button>
-              </div>
-            );
-          })}
-
+          <div className="flex flex-col items-center justify-center gap-4">
+            {interests.map((interest, i) => {
+              return (
+                <div
+                  key={i}
+                  className="flex items-center justify-between w-full gap-2"
+                >
+                  <h3 className="font-bold">- {interest}</h3>
+                  <button
+                    className="p-1 px-2 text-xs text-white transition-all bg-red-400 rounded-full hover:bg-red-500"
+                    onClick={e => removeInterest(e, i)}
+                  >
+                    X
+                  </button>
+                </div>
+              );
+            })}
+          </div>
           <FormGroup
             label="Interest"
             id="interest"
