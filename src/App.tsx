@@ -20,13 +20,13 @@ function App() {
     about:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequatur tempore a odit dolores nobis sed consequuntur laudantium, vero itaque iure eveniet, perspiciatis deleniti unde provident veniam saepe ratione voluptatibus.",
     socialLinks: {
-      facebook: "",
+      facebook: "MohamedBechirMejri",
       twitter: "MohamedBechirMe",
       linkedin: "MohamedBechirMejri",
-      instagram: "",
+      instagram: "MohamedBechirMejri",
       github: "MohamedBechirMejri",
-      youtube: "",
-      discord: "",
+      youtube: "MohamedBechirMejri",
+      discord: "MohamedBechirMejri",
     },
     education: [
       {
