@@ -299,10 +299,10 @@ const Edit = ({
   };
 
   return (
-    <div className="flex flex-col items-center p-8">
+    <div className="flex flex-col items-center max-w-3xl p-8 m-auto">
       <form
         autoComplete="off"
-        className="grid items-center justify-center grid-cols-2 gap-4 p-8"
+        className="flex flex-col items-center justify-center gap-4 p-8 "
       >
         <fieldset className="p-8 border border-black ">
           <legend className="font-bold">Basic Info </legend>{" "}
