@@ -540,13 +540,19 @@ const Edit = ({
           </div>
           <Button handler={handleExperienceSubmit} />
         </fieldset>
-        <div>
+        <div className="flex flex-col items-center justify-center gap-4">
           {skills.map((skill, i) => {
             return (
-              <div key={i}>
-                <h3>Skill: {skill.skill}</h3>
-                <h3>Level: {skill.level}</h3>
-                <button className="" onClick={e => removeSkill(e, i)}>
+              <div
+                key={i}
+                className="flex flex-col items-center justify-center gap-2"
+              >
+                <h3 className="font-bold">Skill: {skill.skill}</h3>
+                <h3>Level: {skill.level}%</h3>
+                <button
+                  className="p-1 px-4 text-white transition-all bg-red-400 hover:bg-red-500"
+                  onClick={e => removeSkill(e, i)}
+                >
                   remove
                 </button>
               </div>
@@ -556,13 +562,13 @@ const Edit = ({
         <fieldset className="flex flex-col items-center gap-2 p-8 border border-black">
           <legend className="font-bold">Skills</legend>
           <FormGroup label="Skill" id="skill" value={skill} f={setSkill} />
-          <div className="">
-            <label htmlFor="skillLevel">Skill Level</label>
+          <div className="flex flex-col items-center justify-center w-full font-bold ">
+            <label className="w-full py-2 text-left" htmlFor="skillLevel">Skill Level</label>
             <input
               type="range"
               min={0}
               max={100}
-              className=""
+              className=" slider"
               id="skillLevel"
               placeholder="Skill Level"
               value={skillLevel}
@@ -571,7 +577,7 @@ const Edit = ({
             <p>{skillLevel}%</p>
           </div>
           <FormGroup
-            label="Skill"
+            label="Years of Experience"
             id="Years of Experience"
             value={skillYears}
             f={setSkillYears}
