@@ -411,7 +411,7 @@ const Edit = ({
               onChange={e => setDescriptionEdu(e.target.value)}
             />
           </div>
-          <Button handler={handleEducationSubmit} text="Add" />
+          <Button handler={handleEducationSubmit} />
         </div>
       </div>
       <div>
@@ -468,7 +468,7 @@ const Edit = ({
               onChange={e => setDescriptionExp(e.target.value)}
             />
           </div>
-          <Button handler={handleExperienceSubmit} text="Add" />
+          <Button handler={handleExperienceSubmit} />
         </div>
       </div>
       <div>
@@ -506,7 +506,7 @@ const Edit = ({
             f={setSkillYears}
             type="number"
           />
-          <Button handler={handleSkillSubmit} text="Add" />
+          <Button handler={handleSkillSubmit} />
         </div>
       </div>
       <div className="">
@@ -521,18 +521,14 @@ const Edit = ({
             </div>
           );
         })}
+
         <div>
-          <div className="">
-            <label htmlFor="language">Language</label>
-            <input
-              type="text"
-              className=""
-              id="language"
-              placeholder="Language"
-              value={language}
-              onChange={e => setLanguage(e.target.value)}
-            />
-          </div>
+          <FormGroup
+            label="Language"
+            id="language"
+            value={language}
+            f={setLanguage}
+          />
           <div className="">
             <label htmlFor="proficiency">Proficiency</label>
             <select
@@ -550,9 +546,7 @@ const Edit = ({
               <option value="Native">Native</option>
             </select>
           </div>
-          <button className="" onClick={e => handleLanguageSubmit(e)}>
-            Add
-          </button>
+          <Button handler={handleLanguageSubmit} />
         </div>
       </div>
       <div>
@@ -568,6 +562,7 @@ const Edit = ({
           );
         })}
         <div>
+          <FormGroup label="Tool" id="tool" value={tool} f={setTool} />
           <div className="">
             <label htmlFor="tool">Tool</label>
             <input
