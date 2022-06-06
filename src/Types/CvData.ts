@@ -37,7 +37,7 @@ type CvData = {
   }[];
   skills: {
     skill: string;
-    level: string;
+    level: number;
     yearsOfExperience: string;
   }[];
   languages: {

@@ -66,17 +66,17 @@ function App() {
     skills: [
       {
         skill: "Javascript",
-        level: "70",
+        level: 70,
         yearsOfExperience: "1.5",
       },
       {
         skill: "Typescript",
-        level: "40",
+        level: 40,
         yearsOfExperience: "0.5",
       },
       {
         skill: "React",
-        level: "65",
+        level: 65,
         yearsOfExperience: "0.8",
       },
     ],
