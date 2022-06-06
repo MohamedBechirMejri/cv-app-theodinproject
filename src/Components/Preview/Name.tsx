@@ -14,8 +14,8 @@ const Name = ({
   website: string;
 }) => {
   return (
-    <h1 className="flex flex-col items-end text-4xl font-bold w-max">
-      <span className="bg-yellow-400">{firstName} </span>
+    <h1 className="flex flex-col items-end text-4xl font-bold text-right w-max min-w-[172.5px]">
+      <span className="w-full bg-yellow-400">{firstName} </span>
       {middleName && <span> {middleName}</span>}
       <span> {lastName}</span>
       <span className="relative py-2 text-lg font-normal tracking-widest ">
