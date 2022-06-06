@@ -30,7 +30,7 @@ const Edit = ({
   const [education, setEducation] = React.useState(data.education);
   const [school, setSchool] = React.useState("");
   const [degree, setDegree] = React.useState("");
-  const [description, setDescription] = React.useState("");
+  const [descriptionEdu, setDescriptionEdu] = React.useState("");
   const [startDateEdu, setStartDateEdu] = React.useState("");
   const [endDateEdu, setEndDateEdu] = React.useState("");
   const [experience, setExperience] = React.useState(data.experience);
@@ -38,17 +38,58 @@ const Edit = ({
   const [position, setPosition] = React.useState("");
   const [startDateExp, setStartDateExp] = React.useState("");
   const [endDateExp, setEndDateExp] = React.useState("");
+  const [descriptionExp, setDescriptionExp] = React.useState("");
   const [skills, setSkills] = React.useState(data.skills);
   const [skill, setSkill] = React.useState("");
   const [skillLevel, setSkillLevel] = React.useState(0);
   const [skillYears, setSkillYears] = React.useState("");
   const [languages, setLanguages] = React.useState(data.languages);
   const [language, setLanguage] = React.useState("");
+  const [languageProficiency, setLanguageProficiency] = React.useState("");
   const [tools, setTools] = React.useState(data.tools);
   const [tool, setTool] = React.useState("");
   const [toolLevel, setToolLevel] = React.useState(0);
   const [interests, setInterests] = React.useState(data.interests);
   const [interest, setInterest] = React.useState("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setData({
+      name: {
+        first: firstName,
+        last: lastName,
+        middle: middleName,
+      },
+      phoneNumber: phoneNumber,
+
+      email: email,
+      address: address,
+      city: city,
+      state: state,
+      country: country,
+      profession: profession,
+      website: website,
+      about: about,
+      socialLinks: {
+        facebook: facebook,
+        twitter: twitter,
+        linkedin: linkedin,
+        instagram: instagram,
+        github: github,
+        youtube: youtube,
+        discord: discord,
+      },
+      education: education,
+      experience: experience,
+      skills: skills,
+      languages: languages,
+      tools: tools,
+      interests: interests,
+    });
+  };
+
+
+
   return (
     <form>
       <div className="form-group">
@@ -260,7 +301,26 @@ const Edit = ({
           onChange={e => setDiscord(e.target.value)}
         />
       </div>
-      <div className="form-group"></div>
+      <div className="form-group">
+        {education.map((edu, i) => {
+          return (
+            <div>
+              <h3>School: {edu.school}</h3>
+              <h3>Degree: {edu.degree}</h3>
+              <h3>
+                Years: {edu.startDate} - {edu.endDate}
+              </h3>
+              <p>description: {edu.description}</p>
+              <button
+                className="btn btn-danger"
+                onClick={() => removeEducation(i)}
+              >
+                remove
+              </button>
+            </div>
+          );
+        })}
+      </div>
     </form>
   );
 };
