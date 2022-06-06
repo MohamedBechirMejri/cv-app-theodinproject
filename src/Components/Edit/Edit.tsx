@@ -484,17 +484,7 @@ const Edit = ({
           );
         })}
         <div>
-          <div className="">
-            <label htmlFor="skill">Skill</label>
-            <input
-              type="text"
-              className=""
-              id="skill"
-              placeholder="Skill"
-              value={skill}
-              onChange={e => setSkill(e.target.value)}
-            />
-          </div>
+          <FormGroup label="Skill" id="skill" value={skill} f={setSkill} />
           <div className="">
             <label htmlFor="skillLevel">Skill Level</label>
             <input
@@ -507,23 +497,16 @@ const Edit = ({
               value={skillLevel}
               onChange={e => setSkillLevel(Number(e.target.value))}
             />
-
             <p>{skillLevel}%</p>
           </div>
-          <div className="">
-            <label htmlFor="skillYears">Years of Experience</label>
-            <input
-              type="number"
-              className=""
-              id="skillYears"
-              placeholder="Years of Experience"
-              value={skillYears}
-              onChange={e => setSkillYears(e.target.value)}
-            />
-          </div>
-          <button className="" onClick={e => handleSkillSubmit(e)}>
-            Add
-          </button>
+          <FormGroup
+            label="Skill"
+            id="Years of Experience"
+            value={skillYears}
+            f={setSkillYears}
+            type="number"
+          />
+          <Button handler={handleSkillSubmit} text="Add" />
         </div>
       </div>
       <div className="">
