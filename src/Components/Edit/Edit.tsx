@@ -364,8 +364,6 @@ const Edit = ({
       />
       <FormGroup label="Github" id="github" value={github} f={setGithub} />
       <FormGroup label="Discord" id="discord" value={discord} f={setDiscord} />
-      <FormGroup label="Discord" id="discord" value={discord} f={setDiscord} />
-
 
       <div className="">
         {education.map((edu, i) => {
