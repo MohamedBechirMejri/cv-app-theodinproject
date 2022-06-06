@@ -299,90 +299,137 @@ const Edit = ({
   };
 
   return (
-    <form autoComplete="off">
-      <FormGroup
-        label="First Name"
-        id="firstName"
-        value={firstName}
-        f={setFirstName}
-      />
-      <FormGroup
-        label="Middle Name"
-        id="middleName"
-        value={middleName}
-        f={setMiddleName}
-      />
-      <FormGroup
-        label="Last Name"
-        id="lastName"
-        value={lastName}
-        f={setLastName}
-      />
-      <FormGroup
-        label="Phone Number"
-        id="phoneNumber"
-        value={phoneNumber}
-        f={setPhoneNumber}
-      />
-      <FormGroup
-        label="Email"
-        id="email"
-        value={email}
-        f={setEmail}
-        type="email"
-      />
-      <FormGroup label="Address" id="address" value={address} f={setAddress} />
-      <FormGroup label="City" id="city" value={city} f={setCity} />
-      <FormGroup label="State" id="state" value={state} f={setState} />
-      <FormGroup label="Country" id="country" value={country} f={setCountry} />
-      <FormGroup
-        label="Profession"
-        id="profession"
-        value={profession}
-        f={setProfession}
-      />
-      <FormGroup label="Website" id="website" value={website} f={setWebsite} />
-      <FormGroup label="About" id="about" value={about} f={setAbout} />
-      <FormGroup
-        label="Facebook"
-        id="facebook"
-        value={facebook}
-        f={setFacebook}
-      />
-      <FormGroup label="Twitter" id="twitter" value={twitter} f={setTwitter} />
-      <FormGroup
-        label="Linkedin"
-        id="linkedin"
-        value={linkedin}
-        f={setLinkedin}
-      />
-      <FormGroup label="Youtube" id="youtube" value={youtube} f={setYoutube} />
-      <FormGroup
-        label="Instagram"
-        id="instagram"
-        value={instagram}
-        f={setInstagram}
-      />
-      <FormGroup label="Github" id="github" value={github} f={setGithub} />
-      <FormGroup label="Discord" id="discord" value={discord} f={setDiscord} />
-
-      <div className="">
-        {education.map((edu, i) => {
-          return (
-            <div key={i}>
-              <h3>School: {edu.school}</h3>
-              <h3>Degree: {edu.degree}</h3>
-              <h3>
-                Years: {edu.startDate} - {edu.endDate}
-              </h3>
-              <p>description: {edu.description}</p>
-              <button className="" onClick={e => removeEducation(e, i)}>
-                remove
-              </button>
-            </div>
-          );
-        })}
-        <div>
+    <div className="flex flex-col items-center p-8">
+      <form
+        autoComplete="off"
+        className="grid items-center justify-center grid-cols-2 gap-4 p-8"
+      >
+        <fieldset className="p-8 border border-black ">
+          <legend className="font-bold">Basic Info </legend>{" "}
+          <FormGroup
+            label="First Name"
+            id="firstName"
+            value={firstName}
+            f={setFirstName}
+          />
+          <FormGroup
+            label="Middle Name"
+            id="middleName"
+            value={middleName}
+            f={setMiddleName}
+          />
+          <FormGroup
+            label="Last Name"
+            id="lastName"
+            value={lastName}
+            f={setLastName}
+          />
+          <FormGroup
+            label="Phone Number"
+            id="phoneNumber"
+            value={phoneNumber}
+            f={setPhoneNumber}
+          />
+          <FormGroup
+            label="Email"
+            id="email"
+            value={email}
+            f={setEmail}
+            type="email"
+          />
+        </fieldset>
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Location</legend>{" "}
+          <FormGroup
+            label="Address"
+            id="address"
+            value={address}
+            f={setAddress}
+          />
+          <FormGroup label="City" id="city" value={city} f={setCity} />
+          <FormGroup label="State" id="state" value={state} f={setState} />
+          <FormGroup
+            label="Country"
+            id="country"
+            value={country}
+            f={setCountry}
+          />
+        </fieldset>
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Other</legend>{" "}
+          <FormGroup
+            label="Profession"
+            id="profession"
+            value={profession}
+            f={setProfession}
+          />
+          <FormGroup
+            label="Website"
+            id="website"
+            value={website}
+            f={setWebsite}
+          />
+          <FormGroup label="About" id="about" value={about} f={setAbout} />
+        </fieldset>
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Social Links</legend>{" "}
+          <FormGroup
+            label="Facebook"
+            id="facebook"
+            value={facebook}
+            f={setFacebook}
+          />
+          <FormGroup
+            label="Twitter"
+            id="twitter"
+            value={twitter}
+            f={setTwitter}
+          />
+          <FormGroup
+            label="Linkedin"
+            id="linkedin"
+            value={linkedin}
+            f={setLinkedin}
+          />
+          <FormGroup
+            label="Youtube"
+            id="youtube"
+            value={youtube}
+            f={setYoutube}
+          />
+          <FormGroup
+            label="Instagram"
+            id="instagram"
+            value={instagram}
+            f={setInstagram}
+          />
+          <FormGroup label="Github" id="github" value={github} f={setGithub} />
+          <FormGroup
+            label="Discord"
+            id="discord"
+            value={discord}
+            f={setDiscord}
+          />
+        </fieldset>
+        <div className="">
+          {education.map((edu, i) => {
+            return (
+              <div key={i}>
+                <h3>School: {edu.school}</h3>
+                <h3>Degree: {edu.degree}</h3>
+                <h3>
+                  Years: {edu.startDate} - {edu.endDate}
+                </h3>
+                <p>description: {edu.description}</p>
+                <button className="" onClick={e => removeEducation(e, i)}>
+                  remove
+                </button>
+              </div>
+            );
+          })}
+        </div>{" "}
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Education</legend>
           <FormGroup label="School" id="school" value={school} f={setSchool} />
           <FormGroup label="Degree" id="degree" value={degree} f={setDegree} />
           <FormGroup
@@ -412,25 +459,26 @@ const Edit = ({
             />
           </div>
           <Button handler={handleEducationSubmit} />
-        </div>
-      </div>
-      <div>
-        {experience.map((exp, i) => {
-          return (
-            <div key={i}>
-              <h3>Company: {exp.company}</h3>
-              <h3>Position: {exp.position}</h3>
-              <h3>
-                Years: {exp.startDate} - {exp.endDate}
-              </h3>
-              <p>description: {exp.description}</p>
-              <button className="" onClick={e => removeExperience(e, i)}>
-                remove
-              </button>
-            </div>
-          );
-        })}
+        </fieldset>
         <div>
+          {experience.map((exp, i) => {
+            return (
+              <div key={i}>
+                <h3>Company: {exp.company}</h3>
+                <h3>Position: {exp.position}</h3>
+                <h3>
+                  Years: {exp.startDate} - {exp.endDate}
+                </h3>
+                <p>description: {exp.description}</p>
+                <button className="" onClick={e => removeExperience(e, i)}>
+                  remove
+                </button>
+              </div>
+            );
+          })}
+        </div>
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Experience</legend>
           <FormGroup
             label="Company"
             id="company"
@@ -469,21 +517,22 @@ const Edit = ({
             />
           </div>
           <Button handler={handleExperienceSubmit} />
-        </div>
-      </div>
-      <div>
-        {skills.map((skill, i) => {
-          return (
-            <div key={i}>
-              <h3>Skill: {skill.skill}</h3>
-              <h3>Level: {skill.level}</h3>
-              <button className="" onClick={e => removeSkill(e, i)}>
-                remove
-              </button>
-            </div>
-          );
-        })}
+        </fieldset>
         <div>
+          {skills.map((skill, i) => {
+            return (
+              <div key={i}>
+                <h3>Skill: {skill.skill}</h3>
+                <h3>Level: {skill.level}</h3>
+                <button className="" onClick={e => removeSkill(e, i)}>
+                  remove
+                </button>
+              </div>
+            );
+          })}
+        </div>
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Skills</legend>
           <FormGroup label="Skill" id="skill" value={skill} f={setSkill} />
           <div className="">
             <label htmlFor="skillLevel">Skill Level</label>
@@ -507,22 +556,22 @@ const Edit = ({
             type="number"
           />
           <Button handler={handleSkillSubmit} />
-        </div>
-      </div>
-      <div className="">
-        {languages.map((language, i) => {
-          return (
-            <div key={i}>
-              <h3>Language: {language.language}</h3>
-              <h3>Proficiency: {language.proficiency}</h3>
-              <button className="" onClick={e => removeLanguage(e, i)}>
-                remove
-              </button>
-            </div>
-          );
-        })}
-
-        <div>
+        </fieldset>
+        <div className="">
+          {languages.map((language, i) => {
+            return (
+              <div key={i}>
+                <h3>Language: {language.language}</h3>
+                <h3>Proficiency: {language.proficiency}</h3>
+                <button className="" onClick={e => removeLanguage(e, i)}>
+                  remove
+                </button>
+              </div>
+            );
+          })}
+        </div>{" "}
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Languages</legend>
           <FormGroup
             label="Language"
             id="language"
@@ -547,21 +596,22 @@ const Edit = ({
             </select>
           </div>
           <Button handler={handleLanguageSubmit} />
-        </div>
-      </div>
-      <div>
-        {tools.map((tool, i) => {
-          return (
-            <div key={i}>
-              <h3>Tool: {tool.tool}</h3>
-              <h3>Level: {tool.level}</h3>
-              <button className="" onClick={e => removeTool(e, i)}>
-                remove
-              </button>
-            </div>
-          );
-        })}
+        </fieldset>
         <div>
+          {tools.map((tool, i) => {
+            return (
+              <div key={i}>
+                <h3>Tool: {tool.tool}</h3>
+                <h3>Level: {tool.level}</h3>
+                <button className="" onClick={e => removeTool(e, i)}>
+                  remove
+                </button>
+              </div>
+            );
+          })}
+        </div>{" "}
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Tools</legend>
           <FormGroup label="Tool" id="tool" value={tool} f={setTool} />
 
           <div className="">
@@ -579,47 +629,35 @@ const Edit = ({
             <p>{toolLevel}%</p>
           </div>
           <Button handler={handleToolSubmit} />
-        </div>
+        </fieldset>
+        <fieldset className="p-8 border border-black">
+          <legend className="font-bold">Interests</legend>
+          {interests.map((interest, i) => {
+            return (
+              <div key={i}>
+                <h3>- {interest}</h3>
+                <button className="" onClick={e => removeInterest(e, i)}>
+                  remove
+                </button>
+              </div>
+            );
+          })}
+          <div>
+            <FormGroup
+              label="Interest"
+              id="interest"
+              value={interest}
+              f={setInterest}
+            />
+            <Button handler={handleInterestSubmit} />
+          </div>
+        </fieldset>
+      </form>{" "}
+      <div className="text-2xl">
+        <Button handler={handleSubmit} text="Submit" />
+        <Button handler={handleReset} text="Clear" />
       </div>
-      <div>
-        <h2>Interests</h2>
-        {interests.map((interest, i) => {
-          return (
-            <div key={i}>
-              <h3>- {interest}</h3>
-              <button className="" onClick={e => removeInterest(e, i)}>
-                remove
-              </button>
-            </div>
-          );
-        })}
-        <div>
-          <FormGroup
-            label="Interest"
-            id="interest"
-            value={interest}
-            f={setInterest}
-          />
-          <Button handler={handleInterestSubmit} />
-        </div>
-      </div>
-      <button
-        className=""
-        onClick={e => {
-          handleSubmit(e);
-        }}
-      >
-        Submit
-      </button>
-      <button
-        className=""
-        onClick={e => {
-          handleReset(e);
-        }}
-      >
-        Clear
-      </button>
-    </form>
+    </div>
   );
 };
 
