@@ -6,6 +6,7 @@ import ContactInfo from "./ContactInfo";
 import About from "./About";
 import Education from "./Education";
 import Experience from "./Experience";
+import Skills from "./Skills";
 
 const Preview = ({ data }: { data: CvData }) => {
   return (
@@ -28,6 +29,11 @@ const Preview = ({ data }: { data: CvData }) => {
             city={data.city}
             state={data.state}
             country={data.country}
+          />
+          <Skills
+            skills={data.skills}
+            languages={data.languages}
+            tools={data.tools}
           />
         </div>
       </div>
