@@ -88,7 +88,9 @@ const Edit = ({
     });
   };
 
-  const handleEducationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleEducationSubmit = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     setEducation([
       ...education,
@@ -405,16 +407,72 @@ const Edit = ({
                 Years: {edu.startDate} - {edu.endDate}
               </h3>
               <p>description: {edu.description}</p>
-              <button
-                className=""
-                onClick={e => removeEducation(e, i)}
-              >
+              <button className="" onClick={e => removeEducation(e, i)}>
                 remove
               </button>
             </div>
           );
         })}
-
+        <div>
+          <div className="">
+            <label htmlFor="school">School</label>
+            <input
+              type="text"
+              className=""
+              id="school"
+              placeholder="School"
+              value={school}
+              onChange={e => setSchool(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="degree">Degree</label>
+            <input
+              type="text"
+              className=""
+              id="degree"
+              placeholder="Degree"
+              value={degree}
+              onChange={e => setDegree(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="startDate">Start Date</label>
+            <input
+              type="number"
+              className=""
+              id="startDate"
+              placeholder="Start Date"
+              value={startDateEdu}
+              onChange={e => setStartDateEdu(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="endDate">End Date</label>
+            <input
+              type="number"
+              className=""
+              id="endDate"
+              placeholder="End Date"
+              value={endDateEdu}
+              onChange={e => setEndDateEdu(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="descriptionEdu">Description</label>
+            <textarea
+              className=""
+              id="descriptionEdu"
+              rows={3}
+              placeholder="Description"
+              value={descriptionEdu}
+              onChange={e => setDescriptionEdu(e.target.value)}
+            />
+          </div>
+          <button className="" onClick={e => handleEducationSubmit(e)}>
+            Add
+          </button>
+        </div>
       </div>
     </form>
   );
