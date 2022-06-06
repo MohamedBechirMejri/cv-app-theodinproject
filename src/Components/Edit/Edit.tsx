@@ -327,18 +327,14 @@ const Edit = ({
         f={setPhoneNumber}
         type="text"
       />
-       
-      <div className="">
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          className=""
-          id="email"
-          placeholder="Email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
-      </div>
+      <FormGroup
+        label="Email"
+        id="email"
+        value={email}
+        f={setEmail}
+        type="text"
+      />
+      
       <div className="">
         <label htmlFor="address">Address</label>
         <input
