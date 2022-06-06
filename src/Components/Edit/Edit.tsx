@@ -611,6 +611,8 @@ const Edit = ({
               value={skillLevel}
               onChange={e => setSkillLevel(Number(e.target.value))}
             />
+
+            <p>{skillLevel}%</p>
           </div>
           <button className="" onClick={e => handleSkillSubmit(e)}>
             Add
