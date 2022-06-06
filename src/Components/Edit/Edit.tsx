@@ -150,7 +150,9 @@ const Edit = ({
     setExperience(newExperience);
   };
 
-  const handleSkillSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSkillSubmit = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     setSkills([
       ...skills,
@@ -175,7 +177,6 @@ const Edit = ({
     newSkills.splice(index, 1);
     setSkills(newSkills);
   };
-  
 
   const handleLanguageSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
