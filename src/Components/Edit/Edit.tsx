@@ -142,7 +142,18 @@ const Edit = ({
     setSkillYears("");
   };
 
-
+  const handleLanguageSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLanguages([
+      ...languages,
+      {
+        language: language,
+        proficiency: languageProficiency,
+      },
+    ]);
+    setLanguage("");
+    setLanguageProficiency("");
+  };
 
   return (
     <form>
