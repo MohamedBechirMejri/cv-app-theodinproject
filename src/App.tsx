@@ -117,7 +117,7 @@ function App() {
   return (
     <div className="App">
       {isEditing ? (
-        <Edit data={data} setData={setData} />
+        <Edit data={data} setData={setData} setIsEditing={setIsEditing} />
       ) : (
         <Preview data={data} />
       )}

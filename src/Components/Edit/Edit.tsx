@@ -4,9 +4,11 @@ import CvData from "../../Types/CvData";
 const Edit = ({
   data,
   setData,
+  setIsEditing,
 }: {
   data: CvData;
   setData: (data: CvData) => void;
+  setIsEditing: (isEditing: boolean) => void;
 }) => {
   const [firstName, setFirstName] = React.useState(data.name.first);
   const [lastName, setLastName] = React.useState(data.name.last);
@@ -86,57 +88,55 @@ const Edit = ({
       tools: tools,
       interests: interests,
     });
+    setIsEditing(false);
   };
 
   const handleReset = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    setFirstName('')
-    setLastName('')
-    setMiddleName('')
-    setPhoneNumber('')
-    setEmail('')
-    setAddress('')
-    setCity('')
-    setState('')
-    setCountry('')
-    setProfession('')
-    setWebsite('')
-    setAbout('')
-    setFacebook('')
-    setTwitter('')
-    setLinkedin('')
-    setInstagram('')
-    setGithub('')
-    setYoutube('')
-    setDiscord('')
-    setEducation([])
-    setSchool('')
-    setDegree('')
-    setDescriptionEdu('')
-    setStartDateEdu('')
-    setEndDateEdu('')
-    setExperience([])
-    setCompany('')
-    setPosition('')
-    setStartDateExp('')
-    setEndDateExp('')
-    setDescriptionExp('')
-    setSkills([])
-    setSkill('')
-    setSkillLevel(0)
-    setSkillYears('')
-    setLanguages([])
-    setLanguage('')
-    setLanguageProficiency('')
-    setTools([])
-    setTool('')
-    setToolLevel(0)
-    setInterests([])
-    setInterest('')
-    
+    setFirstName("");
+    setLastName("");
+    setMiddleName("");
+    setPhoneNumber("");
+    setEmail("");
+    setAddress("");
+    setCity("");
+    setState("");
+    setCountry("");
+    setProfession("");
+    setWebsite("");
+    setAbout("");
+    setFacebook("");
+    setTwitter("");
+    setLinkedin("");
+    setInstagram("");
+    setGithub("");
+    setYoutube("");
+    setDiscord("");
+    setEducation([]);
+    setSchool("");
+    setDegree("");
+    setDescriptionEdu("");
+    setStartDateEdu("");
+    setEndDateEdu("");
+    setExperience([]);
+    setCompany("");
+    setPosition("");
+    setStartDateExp("");
+    setEndDateExp("");
+    setDescriptionExp("");
+    setSkills([]);
+    setSkill("");
+    setSkillLevel(0);
+    setSkillYears("");
+    setLanguages([]);
+    setLanguage("");
+    setLanguageProficiency("");
+    setTools([]);
+    setTool("");
+    setToolLevel(0);
+    setInterests([]);
+    setInterest("");
   };
-
-
 
   const handleEducationSubmit = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
