@@ -186,131 +186,131 @@ const Edit = ({
 
   return (
     <form>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="firstName">First Name</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="firstName"
           placeholder="First Name"
           value={firstName}
           onChange={e => setFirstName(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="lastName">Last Name</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="lastName"
           placeholder="Last Name"
           value={lastName}
           onChange={e => setLastName(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="middleName">Middle Name</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="middleName"
           placeholder="Middle Name"
           value={middleName}
           onChange={e => setMiddleName(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="phoneNumber">Phone Number</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="phoneNumber"
           placeholder="Phone Number"
           value={phoneNumber}
           onChange={e => setPhoneNumber(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="email">Email</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="email"
           placeholder="Email"
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="address">Address</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="address"
           placeholder="Address"
           value={address}
           onChange={e => setAddress(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="city">City</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="city"
           placeholder="City"
           value={city}
           onChange={e => setCity(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="state">State</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="state"
           placeholder="State"
           value={state}
           onChange={e => setState(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="country">Country</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="country"
           placeholder="Country"
           value={country}
           onChange={e => setCountry(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="profession">Profession</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="profession"
           placeholder="Profession"
           value={profession}
           onChange={e => setProfession(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="website">Website</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="website"
           placeholder="Website"
           value={website}
           onChange={e => setWebsite(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="about">About</label>
         <textarea
-          className="form-control"
+          className=""
           id="about"
           rows={3}
           placeholder="About"
@@ -318,84 +318,84 @@ const Edit = ({
           onChange={e => setAbout(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="facebook">Facebook</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="facebook"
           placeholder="Facebook"
           value={facebook}
           onChange={e => setFacebook(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="twitter">Twitter</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="twitter"
           placeholder="Twitter"
           value={twitter}
           onChange={e => setTwitter(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="linkedin">Linkedin</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="linkedin"
           placeholder="Linkedin"
           value={linkedin}
           onChange={e => setLinkedin(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="youtube">Youtube</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="youtube"
           placeholder="Youtube"
           value={youtube}
           onChange={e => setYoutube(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="instagram">Instagram</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="instagram"
           placeholder="Instagram"
           value={instagram}
           onChange={e => setInstagram(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="github">Github</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="github"
           placeholder="Github"
           value={github}
           onChange={e => setGithub(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         <label htmlFor="discord">Discord</label>
         <input
           type="text"
-          className="form-control"
+          className=""
           id="discord"
           placeholder="Github"
           value={discord}
           onChange={e => setDiscord(e.target.value)}
         />
       </div>
-      <div className="form-group">
+      <div className="">
         {education.map((edu, i) => {
           return (
             <div key={i}>
@@ -406,7 +406,7 @@ const Edit = ({
               </h3>
               <p>description: {edu.description}</p>
               <button
-                className="btn btn-danger"
+                className=""
                 onClick={e => removeEducation(e, i)}
               >
                 remove
@@ -414,6 +414,7 @@ const Edit = ({
             </div>
           );
         })}
+
       </div>
     </form>
   );
