@@ -12,7 +12,7 @@ const Address = ({
   country: string;
 }) => {
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 w-max">
       <div className="flex flex-col items-end text-xl font-bold border-black ">
         <p>{address}</p>
         <p>
