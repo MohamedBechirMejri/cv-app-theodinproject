@@ -5,17 +5,17 @@ const FormGroup = ({
   f,
   value,
   id,
-  ClassName,
   type,
-  inputClassName,
+  ClassName = "",
+  inputClassName = "",
 }: {
   label: string;
   f: any;
   value: any;
   id: string;
-  ClassName: string;
+  ClassName?: string;
   type: string;
-  inputClassName: string;
+  inputClassName?: string;
 }) => {
   return (
     <div className={"" + ClassName}>
