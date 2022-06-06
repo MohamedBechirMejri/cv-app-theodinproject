@@ -149,7 +149,6 @@ const Edit = ({
     newExperience.splice(index, 1);
     setExperience(newExperience);
   };
-  
 
   const handleSkillSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -560,6 +559,48 @@ const Edit = ({
             />
           </div>
           <button className="" onClick={e => handleExperienceSubmit(e)}>
+            Add
+          </button>
+        </div>
+      </div>
+      <div>
+        {skills.map((skill, i) => {
+          return (
+            <div key={i}>
+              <h3>Skill: {skill.skill}</h3>
+              <h3>Level: {skill.level}</h3>
+              <button className="" onClick={e => removeSkill(e, i)}>
+                remove
+              </button>
+            </div>
+          );
+        })}
+        <div>
+          <div className="">
+            <label htmlFor="skill">Skill</label>
+            <input
+              type="text"
+              className=""
+              id="skill"
+              placeholder="Skill"
+              value={skill}
+              onChange={e => setSkill(e.target.value)}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="skillLevel">Skill Level</label>
+            <input
+              type="range"
+              min={0}
+              max={100}
+              className=""
+              id="skillLevel"
+              placeholder="Skill Level"
+              value={skillLevel}
+              onChange={e => setSkillLevel(Number(e.target.value))}
+            />
+          </div>
+          <button className="" onClick={e => handleSkillSubmit(e)}>
             Add
           </button>
         </div>
