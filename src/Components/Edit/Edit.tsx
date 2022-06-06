@@ -334,19 +334,13 @@ const Edit = ({
       <FormGroup label="City" id="city" value={city} f={setCity} />
       <FormGroup label="State" id="state" value={state} f={setState} />
       <FormGroup label="Country" id="country" value={country} f={setCountry} />
+      <FormGroup
+        label="Profession"
+        id="profession"
+        value={profession}
+        f={setProfession}
+      />
 
-     
-      <div className="">
-        <label htmlFor="profession">Profession</label>
-        <input
-          type="text"
-          className=""
-          id="profession"
-          placeholder="Profession"
-          value={profession}
-          onChange={e => setProfession(e.target.value)}
-        />
-      </div>
       <div className="">
         <label htmlFor="website">Website</label>
         <input
