@@ -40,6 +40,15 @@ type CvData = {
     level: string;
     yearsOfExperience: string;
   }[];
+  languages: {
+    language: string;
+    proficiency: string;
+  }[];
+  tools: {
+    tool: string;
+    level: number;
+  }[];
+  interests: string[];
 };
 
 export default CvData;

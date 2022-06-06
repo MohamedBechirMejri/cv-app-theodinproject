@@ -80,6 +80,36 @@ function App() {
         yearsOfExperience: "0.8",
       },
     ],
+    languages: [
+      {
+        language: "English",
+        proficiency: "Fluent",
+      },
+      {
+        language: "Arabic",
+        proficiency: "Native",
+      },
+      {
+        language: "French",
+        proficiency: "Beginner",
+      },
+    ],
+
+    tools: [
+      {
+        tool: "Git",
+        level: 40,
+      },
+      {
+        tool: "Gulp",
+        level: 0,
+      },
+      {
+        tool: "Webpack",
+        level: 77,
+      },
+    ],
+    interests: ["Coding", "Reading", "Traveling"],
   });
   return (
     <div className="App">
