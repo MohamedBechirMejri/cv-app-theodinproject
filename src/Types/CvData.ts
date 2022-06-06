@@ -20,6 +20,7 @@ type CvData = {
     instagram: string;
     github: string;
     youtube: string;
+    discord: string;
   };
   education: {
     school: string;

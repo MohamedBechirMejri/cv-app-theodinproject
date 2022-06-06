@@ -26,6 +26,7 @@ function App() {
       instagram: "",
       github: "MohamedBechirMejri",
       youtube: "",
+      discord: "",
     },
     education: [
       {
